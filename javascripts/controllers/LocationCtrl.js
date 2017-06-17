@@ -1,11 +1,8 @@
 app.controller("LocationCtrl", function($scope, $location, $routeParams){
 var service;
-var map;
-var bounds;
-var request;
 var infoWindow;
-var wateringHoles = [];
-  (function () {
+wateringHoles = [];
+  let initMap = () => {
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
       center: {lat: 36.174465, lng: -86.767960}
@@ -16,9 +13,8 @@ var wateringHoles = [];
     });
 
     map.addListener("bounds_changed", () => {
-      wateringHoles=[];
-      bounds=map.getBounds();
-      request = {
+      var bounds=map.getBounds();
+      var request = {
         bounds: bounds,
         query: $routeParams.type
       };
@@ -26,6 +22,8 @@ var wateringHoles = [];
       infoWindow = new google.maps.InfoWindow();
       service = new google.maps.places.PlacesService(map);
       service.textSearch(request, callback);
+      // console.log("after callback executes", $scope.wateringHoles);
+      // return $scope.wateringHoles;
     });
 
 
@@ -59,12 +57,28 @@ var wateringHoles = [];
 
 
   function callback(results, status) {
+      wateringHoles=[];
         if (status === google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
+            console.log("result", results[i]);
             wateringHoles.push(results[i]);
           }
+          // console.log(wateringHoles)
+      // console.log("still in", $scope.wateringHoles);
         }
+        $scope.$apply(function(){
+          $scope.places = wateringHoles;
+          console.log($scope.places);
+          wateringHoles=[];
+        });
       }
-  })();
+            // return $scope.wateringHoles;
+
+  };
+
+  initMap();
+  // console.log($scope.wateringHoles);
+  console.log("function", initMap());
+
 });

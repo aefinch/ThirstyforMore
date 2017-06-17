@@ -1,9 +1,7 @@
 let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
   if(AuthFactory.isAuthenticated()){
-    // console.log("User is authenticated, resolve route promise");
     resolve();
   } else {
-    // console.log("User is not authenticated, reject route promise");
     reject();
   }
 });
@@ -15,10 +13,6 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, GOOGLE_CONFIG, AuthFact
   GoogleMapsLoader.load(function(google) {
 });
 
-  //watch method that fires on change of a route.  3 inputs. 
-  //event is a change event
-  //currRoute is information about your current route
-  //prevRoute is information about the route you came from
   $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute) {
     // checks to see if there is a current user
     var logged = AuthFactory.isAuthenticated();

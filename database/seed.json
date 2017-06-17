@@ -15,6 +15,7 @@
             "philosophy": ""
         }
     },
+    
     "places": {
         "place0": {
             "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
@@ -22,7 +23,7 @@
             "drinkType": "beer",
             "location": "Nashville, TN",
         	"rating": 4,
-            "placeId": "place0"
+            "placeId": "208e74ac1ec4e232952b6b2213f95a9613802f9a"
         },
         "place1": {
             "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
@@ -30,7 +31,7 @@
             "drinkType": "beer",
             "location": "Nashville, TN",
             "rating":4,
-            "placeId": "place1"
+            "placeId": "acba767b0e69fbaedb0583b63cecb24ffb0452f4"
         },
         "place2": {
             "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
@@ -38,7 +39,7 @@
             "drinkType": "wine",
             "location": "Arrington, TN",
             "rating":4,
-            "placeId": "place2"
+            "placeId": "0e9615325696f60e5e755234df6301e5f36a6369"
         },
         "place3": {
             "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
@@ -46,12 +47,12 @@
             "drinkType": "wine",
             "location": "Nashville, TN",
             "rating":3,
-            "placeId": "place3"
+            "placeId": "d2e36cdec2a5db0e771d06b7ddac1b5f18a0792c"
         }
     },
     "beverages": {
         "beverage0": {
-            "placeId": "place0",
+            "placeId": "208e74ac1ec4e232952b6b2213f95a9613802f9a",
             "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
         	"bevId": "dosperros",
             "bevName": "Dos Perros",
@@ -68,7 +69,7 @@
         	"IBU":"16"
         },
         "beverage1": {
-            "placeId": "place0",
+            "placeId": "208e74ac1ec4e232952b6b2213f95a9613802f9a",
             "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
             "bevId": "gerstamberale",
             "bevName": "Gerst Amber Ale",
@@ -85,7 +86,7 @@
             "IBU":"11"
         },
         "beverage2": {
-            "placeId": "place1",
+            "placeId": "acba767b0e69fbaedb0583b63cecb24ffb0452f4",
             "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
             "bevId": "bearwalker",
             "bevName": "Bearwalker Maple Brown Ale",
@@ -102,7 +103,7 @@
             "IBU":"32"
         },
         "beverage3": {
-            "placeId": "place1",
+            "placeId": "acba767b0e69fbaedb0583b63cecb24ffb0452f4",
             "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
             "bevId": "lovebirdstrawberryraspberryhefeweizen",
             "bevName": "Lovebird Strawberry/Raspberry Hefeweizen",
@@ -119,7 +120,7 @@
             "IBU":"12"
         },
         "beverage4": {
-            "placeId": "place2",
+            "placeId": "0e9615325696f60e5e755234df6301e5f36a6369",
             "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
             "bevId": "fireflyrose",
             "bevName": "Firefly Rose",
@@ -136,7 +137,7 @@
             "IBU":""
         },
         "beverage5": {
-            "placeId": "place2",
+            "placeId": "0e9615325696f60e5e755234df6301e5f36a6369",
             "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
             "bevId": "redfoxred",
             "bevName": "Red Fox Red",
@@ -153,7 +154,7 @@
             "IBU":""
         },
         "beverage6": {
-            "placeId": "place3",
+            "placeId": "d2e36cdec2a5db0e771d06b7ddac1b5f18a0792c",
             "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
             "bevId": "musiccitypinotnoir",
             "bevName": "Music City Pinot Noir",
@@ -170,7 +171,7 @@
             "IBU":""
         },
         "beverage7": {
-            "placeId": "place3",
+            "placeId": "d2e36cdec2a5db0e771d06b7ddac1b5f18a0792c",
             "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
             "bevId": "musicrowmerlot",
             "bevName": "Music Row Merlot",

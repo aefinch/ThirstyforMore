@@ -1,0 +1,19 @@
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="drinkDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Choose Your Beverage
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="drinkDropdown">
+    <li ng-repeat="drink in drinks"><a href="/#!/journal/drink/{{drink.bevId}}">{{drink.bevName}}</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a ng-click="addNew()">Add a New Beverage</a></li>
+  </ul>
+</div>
+<form ng-show="newBev">
+  <div class="form-group">
+    <label for="drinkName">Tasting today:</label>
+    <input type="text" ng-model="drink.drinkName" class="form-control" id="drinkName" placeholder="Drink Name">
+    <button type="submit" ng-click="submitNewDrink(drink)" class="btn btn-default">Submit</button>
+  </div>
+</form>

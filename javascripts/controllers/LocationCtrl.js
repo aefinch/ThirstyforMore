@@ -61,7 +61,6 @@ wateringHoles = [];
         if (status === google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
-            console.log("result", results[i]);
             wateringHoles.push(results[i]);
           }
           // console.log(wateringHoles)
@@ -69,7 +68,6 @@ wateringHoles = [];
         }
         $scope.$apply(function(){
           $scope.places = wateringHoles;
-          console.log($scope.places);
           wateringHoles=[];
         });
       }
@@ -79,6 +77,6 @@ wateringHoles = [];
 
   initMap();
   // console.log($scope.wateringHoles);
-  console.log("function", initMap());
+  // console.log("function", initMap());
 
 });

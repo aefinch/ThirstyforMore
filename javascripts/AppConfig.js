@@ -8,8 +8,12 @@ let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
   }
 });
 
-app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthFactory) {
+app.run(function($location, $rootScope, FIREBASE_CONFIG, GOOGLE_CONFIG, AuthFactory) {
   firebase.initializeApp(FIREBASE_CONFIG);
+  GoogleMapsLoader.KEY = GOOGLE_CONFIG;
+  GoogleMapsLoader.LIBRARIES = ['places'];
+  GoogleMapsLoader.load(function(google) {
+});
 
   //watch method that fires on change of a route.  3 inputs. 
   //event is a change event
@@ -32,23 +36,21 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthFactory) {
     //if not on /auth page AND not logged in redirect to /auth
     if (!appTo && !logged) {
       event.preventDefault();
-      $location.path('/login');
+      $location.path('/auth');
     }
   });
 });
 
+
+
 app.config(function($routeProvider) {
   $routeProvider
-  .when('/login', {
-    templateUrl: 'partials/login.html',
-    controller: 'AuthCtrl'
-  })
-  .when('/register', {
-    templateUrl: 'partials/register.html',
+  .when('/auth', {
+    templateUrl: 'partials/auth.html',
     controller: 'AuthCtrl'
   })
   .when('/logout', {
-    templateUrl: 'partials/login.html',
+    templateUrl: 'partials/auth.html',
     controller: 'AuthCtrl', 
     resolve: {isAuth}
   })
@@ -57,8 +59,8 @@ app.config(function($routeProvider) {
     controller: 'chooseDrinkCtrl',
     resolve: {isAuth}
   })
-  .when('/locations', {
-    templateUrl: 'partials/locations.html'.
+  .when('/locations/drinkType/:type', {
+    templateUrl: 'partials/locations.html',
     controller: 'LocationCtrl',
     resolve: {isAuth}
   })
@@ -87,5 +89,5 @@ app.config(function($routeProvider) {
     controller: 'FavoritesCtrl',
     resolve: {isAuth}
   })
-  otherwise('/login');
+  .otherwise('/home');
 });

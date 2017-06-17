@@ -16,6 +16,8 @@
     "grunt-sass": "^1.2.1",
     "matchdep": "^1.0.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "google-maps": "^3.2.1"
+  },
   "description": ""
 }

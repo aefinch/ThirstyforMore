@@ -1,0 +1,190 @@
+{
+    "users": {
+        "user0": {
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "name": "Andrea",
+            "avatar": "",
+        	"registrationDate":"06/14/2017",
+        	"philosophy": "All is fair in love and beer."
+        },
+        "user1": {
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "name": "Rachael",
+            "avatar": "I finally quit drinking for good.  Now I drink for evil.",
+        	"registrationDate":"06/14/2017",
+            "philosophy": ""
+        }
+    },
+    "places": {
+        "place0": {
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "name": "Yazoo Brewing Company",
+            "drinkType": "beer",
+            "location": "Nashville, TN",
+        	"rating": 4,
+            "placeId": "place0"
+        },
+        "place1": {
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "name": "Jackalope Brewing Company",
+            "drinkType": "beer",
+            "location": "Nashville, TN",
+            "rating":4,
+            "placeId": "place1"
+        },
+        "place2": {
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "name": "Arrington Vineyards",
+            "drinkType": "wine",
+            "location": "Arrington, TN",
+            "rating":4,
+            "placeId": "place2"
+        },
+        "place3": {
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "name": "City Winery",
+            "drinkType": "wine",
+            "location": "Nashville, TN",
+            "rating":3,
+            "placeId": "place3"
+        }
+    },
+    "beverages": {
+        "beverage0": {
+            "placeId": "place0",
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+        	"bevId": "dosperros",
+            "bevName": "Dos Perros",
+            "bevType": "beer",
+            "userRating": 4,
+        	"tastedDate":"12/13/16",
+            "userNotes": "tasty",
+        	"vineyard": "",
+        	"varietal":"",
+        	"wineType":"",
+        	"brewery":"Yazoo Brewing Company",
+        	"beerStyle":"Brown Ale",
+        	"ABV":"4.9",
+        	"IBU":"16"
+        },
+        "beverage1": {
+            "placeId": "place0",
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "bevId": "gerstamberale",
+            "bevName": "Gerst Amber Ale",
+            "bevType": "beer",
+            "userRating": 4,
+            "tastedDate":"1/18/17",
+            "userNotes": "I'd drink it again!",
+            "vineyard": "",
+            "varietal":"",
+            "wineType":"",
+            "brewery":"Yazoo Brewing Company",
+            "beerStyle":"Amber Ale",
+            "ABV":"5.1",
+            "IBU":"11"
+        },
+        "beverage2": {
+            "placeId": "place1",
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "bevId": "bearwalker",
+            "bevName": "Bearwalker Maple Brown Ale",
+            "bevType": "beer",
+            "userRating": 4,
+            "tastedDate":"3/5/17",
+            "userNotes": "very smooth!",
+            "vineyard": "",
+            "varietal":"",
+            "wineType":"",
+            "brewery":"Jackalope Brewing Company",
+            "beerStyle":"Brown Ale",
+            "ABV":"5.1",
+            "IBU":"32"
+        },
+        "beverage3": {
+            "placeId": "place1",
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "bevId": "lovebirdstrawberryraspberryhefeweizen",
+            "bevName": "Lovebird Strawberry/Raspberry Hefeweizen",
+            "bevType": "beer",
+            "userRating": 5,
+            "tastedDate":"5/6/17",
+            "userNotes": "my new favorite!",
+            "vineyard": "",
+            "varietal":"",
+            "wineType":"",
+            "brewery":"Jackalope Brewing Company",
+            "beerStyle":"Hefeweizen",
+            "ABV":"4.4",
+            "IBU":"12"
+        },
+        "beverage4": {
+            "placeId": "place2",
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "bevId": "fireflyrose",
+            "bevName": "Firefly Rose",
+            "bevType": "wine",
+            "userRating": 3,
+            "tastedDate":"6/2/17",
+            "userNotes": "a little dry",
+            "vineyard": "Arrington Vineyards",
+            "varietal":"Sangiovese",
+            "wineType":"Rose wine",
+            "brewery":"",
+            "beerStyle":"",
+            "ABV":"14.5",
+            "IBU":""
+        },
+        "beverage5": {
+            "placeId": "place2",
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "bevId": "redfoxred",
+            "bevName": "Red Fox Red",
+            "bevType": "wine",
+            "userRating": 4,
+            "tastedDate":"3/12/17",
+            "userNotes": "smooth",
+            "vineyard": "Arrington Vineyards",
+            "varietal":"Sangiovese blend",
+            "wineType":"Red wine",
+            "brewery":"",
+            "beerStyle":"",
+            "ABV":"14.5",
+            "IBU":""
+        },
+        "beverage6": {
+            "placeId": "place3",
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "bevId": "musiccitypinotnoir",
+            "bevName": "Music City Pinot Noir",
+            "bevType": "wine",
+            "userRating": "",
+            "tastedDate":"2/18/17",
+            "userNotes": "I like the name",
+            "vineyard": "N/A",
+            "varietal":"Pinot Noir",
+            "wineType":"Pinot Noir",
+            "brewery":"",
+            "beerStyle":"",
+            "ABV":"14.3",
+            "IBU":""
+        },
+        "beverage7": {
+            "placeId": "place3",
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "bevId": "musicrowmerlot",
+            "bevName": "Music Row Merlot",
+            "bevType": "wine",
+            "userRating": "",
+            "tastedDate":"3/26/17",
+            "userNotes": "",
+            "vineyard": "Stagecoach Vineyard",
+            "varietal":"Merlot",
+            "wineType":"Merlot",
+            "brewery":"",
+            "beerStyle":"",
+            "ABV":"14.1",
+            "IBU":""
+        }
+    }
+}

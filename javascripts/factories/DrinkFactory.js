@@ -1,9 +1,9 @@
 app.factory("DrinkFactory", function($q, $http, FIREBASE_CONFIG){
 
-	let getDrinks = (sortId) => {
+	let getDrinks = (sortId, sortType) => {
 		let drinks = [];
 		return $q((resolve, reject) => {
-			$http.get(`${FIREBASE_CONFIG.databaseURL}/beverages.json?orderBy="placeId"&equalTo="${sortId}"`)
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/beverages.json?orderBy="${sortType}"&equalTo="${sortId}"`)
 			.then((fbDrinks) => {
 				let drinkOptions = fbDrinks.data;
 				Object.keys(drinkOptions).forEach((key) => {
@@ -18,7 +18,6 @@ app.factory("DrinkFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 	let postNewDrink = (newDrink) => {
-		console.log("newDrink in factory", newDrink);
 		return $q((resolve, reject) => {
 			$http.post(`${FIREBASE_CONFIG.databaseURL}/beverages.json`, JSON.stringify(newDrink))
 			.then((results) => {

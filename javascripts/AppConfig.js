@@ -58,14 +58,19 @@ app.config(function($routeProvider) {
     controller: 'LocationCtrl',
     resolve: {isAuth}
   })
-  .when('/location/place/:id', {
+  .when('/locations/brewery/:id', {
     templateUrl: '/partials/drinkList.html',
     controller: 'DrinkCtrl',
     resolve: {isAuth}
   })
+  .when('/locations/winery/:id', {
+    templateUrl: '/partials/drinkList.html',
+    controller: 'DrinkCtrl', 
+    resolve: {isAuth}
+  })
   .when('/journal/drink/:id', {
-    templateUrl: '/partials/journal.html',
-    controller: 'DrinkCtrl',
+    templateUrl: '/partials/journalEntry.html',
+    controller: 'JournalCtrl',
     resolve: {isAuth}
   })
   // .when('/beer/view/:id', {

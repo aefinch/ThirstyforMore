@@ -22,8 +22,6 @@ wateringHoles = [];
       infoWindow = new google.maps.InfoWindow();
       service = new google.maps.places.PlacesService(map);
       service.textSearch(request, callback);
-      // console.log("after callback executes", $scope.wateringHoles);
-      // return $scope.wateringHoles;
     });
 
 
@@ -61,22 +59,18 @@ wateringHoles = [];
         if (status === google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
+            results[i].type = $routeParams.type;
             wateringHoles.push(results[i]);
           }
-          // console.log(wateringHoles)
-      // console.log("still in", $scope.wateringHoles);
         }
         $scope.$apply(function(){
           $scope.places = wateringHoles;
           wateringHoles=[];
         });
       }
-            // return $scope.wateringHoles;
-
   };
 
   initMap();
-  // console.log($scope.wateringHoles);
-  // console.log("function", initMap());
+
 
 });

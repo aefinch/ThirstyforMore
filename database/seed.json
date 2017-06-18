@@ -66,7 +66,8 @@
         	"brewery":"Yazoo Brewing Company",
         	"beerStyle":"Brown Ale",
         	"ABV":"4.9",
-        	"IBU":"16"
+        	"IBU":"16",
+            "id":"beverage0"
         },
         "beverage1": {
             "placeId": "208e74ac1ec4e232952b6b2213f95a9613802f9a",
@@ -83,7 +84,8 @@
             "brewery":"Yazoo Brewing Company",
             "beerStyle":"Amber Ale",
             "ABV":"5.1",
-            "IBU":"11"
+            "IBU":"11",
+            "id":"beverage1"
         },
         "beverage2": {
             "placeId": "acba767b0e69fbaedb0583b63cecb24ffb0452f4",
@@ -100,7 +102,8 @@
             "brewery":"Jackalope Brewing Company",
             "beerStyle":"Brown Ale",
             "ABV":"5.1",
-            "IBU":"32"
+            "IBU":"32",
+            "id":"beverage2"
         },
         "beverage3": {
             "placeId": "acba767b0e69fbaedb0583b63cecb24ffb0452f4",
@@ -117,7 +120,8 @@
             "brewery":"Jackalope Brewing Company",
             "beerStyle":"Hefeweizen",
             "ABV":"4.4",
-            "IBU":"12"
+            "IBU":"12",
+            "id":"beverage3"
         },
         "beverage4": {
             "placeId": "0e9615325696f60e5e755234df6301e5f36a6369",
@@ -134,7 +138,8 @@
             "brewery":"",
             "beerStyle":"",
             "ABV":"14.5",
-            "IBU":""
+            "IBU":"",
+            "id":"beverage4"
         },
         "beverage5": {
             "placeId": "0e9615325696f60e5e755234df6301e5f36a6369",
@@ -151,7 +156,8 @@
             "brewery":"",
             "beerStyle":"",
             "ABV":"14.5",
-            "IBU":""
+            "IBU":"",
+            "id":"beverage5"
         },
         "beverage6": {
             "placeId": "d2e36cdec2a5db0e771d06b7ddac1b5f18a0792c",
@@ -168,7 +174,8 @@
             "brewery":"",
             "beerStyle":"",
             "ABV":"14.3",
-            "IBU":""
+            "IBU":"",
+            "id":"beverage6"
         },
         "beverage7": {
             "placeId": "d2e36cdec2a5db0e771d06b7ddac1b5f18a0792c",
@@ -185,7 +192,8 @@
             "brewery":"",
             "beerStyle":"",
             "ABV":"14.1",
-            "IBU":""
+            "IBU":"",
+            "id":"beverage7"
         }
     }
 }

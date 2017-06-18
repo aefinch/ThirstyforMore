@@ -4,7 +4,11 @@ app.controller("DrinkCtrl", function ($location, $scope, $rootScope, $routeParam
     $scope.drinks = [];
     let getDrinkOptions = (placeId) => {
     	DrinkFactory.getDrinks(placeId, "placeId").then((drinkz) => {
-    		$scope.drinks = drinkz;
+    		for (i=0; i<drinkz.length; i++){
+                if(drinkz[i].userRating===""){
+                    $scope.drinks.push(drinkz[i]);
+                }
+            }
     	}).catch((error) => {
     		console.log("getDrinkOptions error", error);
     	});
@@ -25,17 +29,17 @@ app.controller("DrinkCtrl", function ($location, $scope, $rootScope, $routeParam
     	});
     };
 
-    $scope.submitNewDrink = (drink) => {
+    $scope.submitNewDrink = (newDrink) => {
         let currentLocation = $location.url();
         if (currentLocation.includes("brewery")){
             $scope.drink.bevType = "beer";
         } else {
             $scope.drink.bevType = "wine";
         }
-    	$scope.drink.bevId = $scope.drink.drinkName.toLowerCase().replace(/ /g, "");
+    	$scope.drink.bevId = newDrink.toLowerCase().replace(/ /g, "");
 	    $scope.drink.placeId = $routeParams.id;
 	    $scope.drink.uid = $rootScope.user.uid;
-	    $scope.drink.bevName = $scope.drink.drinkName;
+	    $scope.drink.bevName = newDrink;
 	    $scope.drink.userRating = "";
 	    $scope.drink.tastedDate = "";
 	    $scope.drink.userNotes = "";

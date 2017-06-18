@@ -1,12 +1,12 @@
 app.controller("JournalCtrl", function ($location, $scope, $routeParams, $rootScope, DrinkFactory){
 	let bevId = $routeParams.id;
-
 	let loadDrinkInfo = (bevId) => {
-		$scope.drinks = [];
+		$scope.drink = [];
 		DrinkFactory.getDrinks(bevId, "bevId").then((drinkz) => {
     		$scope.drink = drinkz[0];
     		$scope.drink.userRating="";
     		$scope.drink.userNotes="";
+            console.log($scope.drink);
 	    	if ($scope.drink.bevType==="beer"){
 	    		$scope.beer=true;
 	    	} else {
@@ -21,13 +21,13 @@ app.controller("JournalCtrl", function ($location, $scope, $routeParams, $rootSc
     let addNewDrink = (drink) => {
     	DrinkFactory.postNewDrink(drink).then((results) => {
     		$scope.drink = {};
-            // $location.url(`/journal/drink/${drink.bevId}`);
+            $location.url(`/journal/listView`);
     	}).catch((error) => {
     		console.log("Add error", error);
     	});
     };
-
-    $scope.submitNewDrink = (drink) => {
+    $scope.buttonType="Submit";
+    $scope.submitDrink = (drink) => {
 	    $scope.drink.uid = $rootScope.user.uid;
 	    addNewDrink($scope.drink);
 	};

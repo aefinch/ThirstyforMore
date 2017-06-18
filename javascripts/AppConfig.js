@@ -73,11 +73,16 @@ app.config(function($routeProvider) {
     controller: 'JournalCtrl',
     resolve: {isAuth}
   })
-  // .when('/beer/view/:id', {
-  //   templateUrl: '/partials/beerJournal.html',
-  //   controller: 'DrinkCtrl',
-  //   resolve: {isAuth}
-  // })
+  .when('/journal/listView', {
+    templateUrl: '/partials/journalList.html',
+    controller: 'JournalListCtrl',
+    resolve: {isAuth}
+  })
+  .when('/journal/edit/:id', {
+    templateUrl: '/partials/journalEntry.html',
+    controller: 'JournalEditCtrl',
+    resolve: {isAuth}
+  })
   .when('/user/profile', {
     templateUrl: '/partials/userAccount.html',
     controller: 'AccountCtrl',

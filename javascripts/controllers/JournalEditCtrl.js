@@ -15,7 +15,6 @@ app.controller("JournalEditCtrl", function($scope, $routeParams, $location, Drin
     loadDrinkInfo();
 
     $scope.submitDrink = (drink) => {
-    	console.log(drink);
     	DrinkFactory.editJournalEntry(drink).then((results) => {
     		$location.url('/journal/listView');
     	}).catch((error) => {

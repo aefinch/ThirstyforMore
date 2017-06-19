@@ -21,7 +21,8 @@ app.controller("DrinkCtrl", function ($location, $scope, $rootScope, $routeParam
     };
     
     let addNewDrink = (drink) => {
-    	DrinkFactory.postNewDrink(drink).then((results) => {
+    	DrinkFactory.postNewDrink(drink)
+        .then((results) => {
     		$scope.drink = {};
             $location.url(`/journal/drink/${drink.bevId}`);
     	}).catch((error) => {
@@ -38,7 +39,7 @@ app.controller("DrinkCtrl", function ($location, $scope, $rootScope, $routeParam
         }
     	$scope.drink.bevId = newDrink.toLowerCase().replace(/ /g, "");
 	    $scope.drink.placeId = $routeParams.id;
-	    $scope.drink.uid = $rootScope.user.uid;
+	    $scope.drink.uid = "";
 	    $scope.drink.bevName = newDrink;
 	    $scope.drink.userRating = "";
 	    $scope.drink.tastedDate = "";
@@ -50,6 +51,7 @@ app.controller("DrinkCtrl", function ($location, $scope, $rootScope, $routeParam
 	    $scope.drink.beerStyle = "";
 	    $scope.drink.ABV = "";
 	    $scope.drink.IBU = "";
+        $scope.drink.id = "";
 	    addNewDrink($scope.drink);
 	};
 

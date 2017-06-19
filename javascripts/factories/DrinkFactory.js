@@ -21,6 +21,7 @@ app.factory("DrinkFactory", function($q, $http, FIREBASE_CONFIG){
 		return $q((resolve, reject) => {
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/beverages/${entryId}.json`)
 			.then((results) => {
+				results.data.id = entryId;
 				resolve(results.data);
 			}).catch((error) => {
 				reject(error);
@@ -40,7 +41,6 @@ app.factory("DrinkFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 	let editJournalEntry = (revisedEntry) => {
-		console.log("in the factory", revisedEntry);
 		return $q((resolve, reject) => {
 			$http.put(`${FIREBASE_CONFIG.databaseURL}/beverages/${revisedEntry.id}.json`,
 				JSON.stringify({

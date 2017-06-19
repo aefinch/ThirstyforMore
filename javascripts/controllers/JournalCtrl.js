@@ -6,6 +6,7 @@ app.controller("JournalCtrl", function ($location, $scope, $routeParams, $rootSc
     		$scope.drink = drinkz[0];
     		$scope.drink.userRating="";
     		$scope.drink.userNotes="";
+            $scope.drink.id="";
             console.log($scope.drink);
 	    	if ($scope.drink.bevType==="beer"){
 	    		$scope.beer=true;

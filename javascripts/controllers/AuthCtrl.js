@@ -21,21 +21,23 @@ app.controller("AuthCtrl", function($location, $rootScope, $routeParams, $scope,
 		}, (error) => {
 			$scope.alerts.push({msg: error.message});
 		}).then((user) => {
+			$rootScope.user = {};
 			$rootScope.user = user;
 			$location.url('/home');
 		}).catch();
 	};
 
 	$scope.registerUser = () => {
-		AuthFactory.registerWithEmail($scope.auth).then((registeredUser) => {
+		AuthFactory.registerWithEmail($scope.auth)
+		.then((registeredUser) => {
 			$scope.auth.uid = registeredUser.uid;
 			$scope.auth.date = new Date();
 			return UserFactory.addUser($scope.auth);
 		}, (error) => {
 			$scope.alerts.push({msg: error.message});
 		}).then((registerComplete) => {
-			logIn();
-		}).catch(() => {
+			$scope.logIn();
+		}).catch((error) => {
 			console.log("addUser error", error);
 		});
 	};

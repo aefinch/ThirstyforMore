@@ -53,9 +53,14 @@ app.config(function($routeProvider) {
     controller: 'chooseDrinkCtrl',
     resolve: {isAuth}
   })
-  .when('/locations/drinkType/:type', {
-    templateUrl: 'partials/locations.html',
-    controller: 'LocationCtrl',
+  .when('/locations/drinkType/brewery', {
+    templateUrl: 'partials/beerLocations.html',
+    controller: 'BeerLocationCtrl',
+    resolve: {isAuth}
+  })
+  .when('/locations/drinkType/winery', {
+    templateUrl: 'partials/wineLocations.html',
+    controller: 'WineLocationCtrl',
     resolve: {isAuth}
   })
   .when('/locations/brewery/:id', {

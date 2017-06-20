@@ -1,9 +1,9 @@
-app.controller("LocationCtrl", function($scope, $location, $routeParams){
+app.controller("BeerLocationCtrl", function($scope, $location, $routeParams){
 var service;
 var infoWindow;
 wateringHoles = [];
   let initMap = () => {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById('beerMap'), {
       zoom: 12,
       center: {lat: 36.174465, lng: -86.767960}
     });
@@ -16,7 +16,7 @@ wateringHoles = [];
       var bounds=map.getBounds();
       var request = {
         bounds: bounds,
-        query: $routeParams.type
+        query: "brewery"
       };
       
       infoWindow = new google.maps.InfoWindow();
@@ -59,7 +59,7 @@ wateringHoles = [];
         if (status === google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
-            results[i].type = $routeParams.type;
+            results[i].type = "brewery";
             wateringHoles.push(results[i]);
           }
         }
@@ -71,6 +71,4 @@ wateringHoles = [];
   };
 
   initMap();
-
-
 });

@@ -29,6 +29,7 @@ app.controller("JournalCtrl", function ($location, $scope, $routeParams, $rootSc
     $scope.buttonType="Submit";
     $scope.submitDrink = (drink) => {
 	    $scope.drink.uid = $rootScope.user.uid;
+        $scope.drink.tastedDate = new Date();
 	    addNewDrink($scope.drink);
 	};
 });

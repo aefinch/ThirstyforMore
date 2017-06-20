@@ -1,10 +1,34 @@
 <h3>{{userName}}'s Drink Journal</h3>
 <h6>{{philosophy}}</h6>
 <input class="form-control form-spacing searchInput" type="text" name="" placeholder="Search journal entries..." ng-model="searchText">
+<div class="dropdown col-xs-6">
+  <button class="btn btn-default dropdown-toggle" type="button" id="filterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Filter by:
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a ng-click="filterResults('beer')">Beer</a></li>
+    <li><a ng-click="filterResults('wine')">Wine</a></li>
+    <li><a ng-click="filterResults('')">All</a></li>
+  </ul>
+</div>
+<div class="sortRadio col-xs-6">
+Select an option to sort your results:
+	<label class="radio-inline">
+	  <input type="radio" name="sortOptions" ng-click="sortResults('bevName')" value="name"> Name
+	</label>
+	<label class="radio-inline">
+	  <input type="radio" name="sortOptions" ng-click="sortResults('userRating')" value="rating"> Rating
+	</label>
+	<label class="radio-inline">
+	  <input type="radio" name="sortOptions" ng-click="sortResults('tastedDate')" value="date"> Tasted Date
+	</label>
+</div>
 <table class="table">
-	<tr ng-repeat="entry in drinks | filter: searchText">
+	<tr ng-repeat="entry in drinks | orderBy: sortBy | filter: {searchText, bevType: filterBy}">
 		<td>
 			<h4>{{entry.bevName}}</h4>
+			<h5>by {{entry.brewery}}{{entry.winery}}</h5>
 			<p>{{entry.userRating}}</p>
 			<p>{{entry.userNotes}}</p>
 		</td>

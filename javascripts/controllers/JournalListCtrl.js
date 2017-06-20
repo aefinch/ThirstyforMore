@@ -1,6 +1,7 @@
 app.controller("JournalListCtrl", function($scope, $rootScope, $location, DrinkFactory){
 	$scope.userName = $rootScope.user.name;
 	$scope.philosophy = $rootScope.user.philosophy;
+
 	let getFullJournal = () => {
 		$scope.drinks = [];
 		DrinkFactory.getDrinks($rootScope.user.uid, "uid").then((drinkz) => {
@@ -20,6 +21,13 @@ app.controller("JournalListCtrl", function($scope, $rootScope, $location, DrinkF
 		}).catch((error) => {
 			console.log("deleteError", error);
 		});
+	};
+
+	$scope.sortResults = (value) => {
+		$scope.sortBy = value;
+	};
+	$scope.filterResults = (value) => {
+		$scope.filterBy = value;
 	};
 
 });

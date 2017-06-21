@@ -25,22 +25,30 @@
   </div>
   <div class="form-group">
     <label for="userNotes">Notes:</label>
-    <textarea type="" class="form-control" ng-model="drink.userNotes" placeholder=""></textarea>
+    <textarea type="" class="form-control" ng-model="userNote.comment" placeholder=""></textarea>
+  </div>
+  <div ng-show="edit">
+    <div ng-repeat="note in previousNotes | orderBy: date">
+      <br>
+      <div>{{note.date | date: 'longDate'}}</div>
+      <div>{{note.comment}}</div>
+      <br>
+    </div>
   </div>
   <button type="submit" ng-click="submitDrink(drink)" class="btn btn-default">{{buttonType}}</button>
 </form>
 <form ng-show="!beer">
   <div class="form-group">
     <label for="brewery">Winery/Vineyard:</label>
-    <input type="text" class="form-control" ng-model="drink.vineyard" placeholder="Brewery Name">
+    <input type="text" class="form-control" ng-model="drink.vineyard" placeholder="Winery Name">
   </div>
   <div class="form-group">
     <label for="beerStyle">Wine Type: </label>
-    <input type="text" class="form-control" ng-model="drink.wineType" placeholder="Amber Ale, Lager, etc.">
+    <input type="text" class="form-control" ng-model="drink.wineType" placeholder="Red, White, Rose, Etc.">
   </div>
   <div class="form-group">
     <label for="varietal">Varietal: </label>
-    <input type="number" class="form-control" ng-model="drink.varietal" placeholder="IBU">
+    <input type="number" class="form-control" ng-model="drink.varietal" placeholder="varietal">
   </div>
   <div class="form-group">
     <label for="abv">ABV:</label>
@@ -55,7 +63,16 @@
   </div>
   <div class="form-group">
     <label for="userNotes">Notes:</label>
-    <textarea type="" class="form-control" ng-model="drink.userNotes" placeholder=""></textarea>
+    <textarea type="" class="form-control" ng-model="userNote.comment" placeholder=""></textarea>
+  </div>
+  <div ng-show="edit">
+    <div ng-repeat="note in previousNotes | orderBy: date">
+      <br>
+      <div>{{note.date | date: 'longDate'}}</div>
+      <div>{{note.comment}}</div>
+      <br>
+    </div>
   </div>
   <button type="submit" ng-click="submitDrink(drink)" class="btn btn-default">{{buttonType}}</button>
 </form>
+

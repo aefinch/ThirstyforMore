@@ -50,6 +50,48 @@
             "placeId": "d2e36cdec2a5db0e771d06b7ddac1b5f18a0792c"
         }
     },
+    "userNotes": {
+        "userNote0": {
+            "comment": "tasty",
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "bevId": "dosperros"
+        },
+        "userNote1": {
+            "comment": "I'd drink it again!",
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "bevId": "gerstamberale"
+        },
+        "userNote2": {
+            "comment": "very smooth!",
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "bevId": "bearwalker"
+        },
+        "userNote3": {
+            "comment": "my new favorite!",
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "bevId": "lovebirdstrawberryraspberryhefeweizen"
+        },
+        "userNote4": {
+            "comment": "a little dry",
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "bevId": "fireflyrose"
+        },
+        "userNote5": {
+            "comment": "smooth",
+            "uid": "5MrptfdyKFdramsPe8Bzp8XEYm82",
+            "bevId": "redfoxred"
+        },
+        "userNote6": {
+            "comment": "I like the name",
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "bevId": "musiccitypinotnoir"
+        },
+        "userNote7": {
+            "comment": "¯|_(ツ)_/¯",
+            "uid": "LudDKmhv6wRLM910eEzAnU7WpGu1",
+            "bevId": "musicrowmerlot"
+        }
+    },
     "beverages": {
         "beverage0": {
             "placeId": "208e74ac1ec4e232952b6b2213f95a9613802f9a",
@@ -59,7 +101,7 @@
             "bevType": "beer",
             "userRating": 4,
         	"tastedDate":"12/13/16",
-            "userNotes": "tasty",
+            "mostRecentDate": "",
         	"vineyard": "",
         	"varietal":"",
         	"wineType":"",
@@ -77,7 +119,7 @@
             "bevType": "beer",
             "userRating": 4,
             "tastedDate":"1/18/17",
-            "userNotes": "I'd drink it again!",
+            "mostRecentDate": "",
             "vineyard": "",
             "varietal":"",
             "wineType":"",
@@ -95,7 +137,7 @@
             "bevType": "beer",
             "userRating": 4,
             "tastedDate":"3/5/17",
-            "userNotes": "very smooth!",
+            "mostRecentDate": "",
             "vineyard": "",
             "varietal":"",
             "wineType":"",
@@ -113,7 +155,7 @@
             "bevType": "beer",
             "userRating": 5,
             "tastedDate":"5/6/17",
-            "userNotes": "my new favorite!",
+            "mostRecentDate": "",
             "vineyard": "",
             "varietal":"",
             "wineType":"",
@@ -131,7 +173,7 @@
             "bevType": "wine",
             "userRating": 3,
             "tastedDate":"6/2/17",
-            "userNotes": "a little dry",
+            "mostRecentDate": "",
             "vineyard": "Arrington Vineyards",
             "varietal":"Sangiovese",
             "wineType":"Rose wine",
@@ -149,7 +191,7 @@
             "bevType": "wine",
             "userRating": 4,
             "tastedDate":"3/12/17",
-            "userNotes": "smooth",
+            "mostRecentDate": "",
             "vineyard": "Arrington Vineyards",
             "varietal":"Sangiovese blend",
             "wineType":"Red wine",
@@ -165,9 +207,9 @@
             "bevId": "musiccitypinotnoir",
             "bevName": "Music City Pinot Noir",
             "bevType": "wine",
-            "userRating": "",
+            "userRating": 4,
             "tastedDate":"2/18/17",
-            "userNotes": "I like the name",
+            "mostRecentDate": "",
             "vineyard": "N/A",
             "varietal":"Pinot Noir",
             "wineType":"Pinot Noir",
@@ -183,9 +225,9 @@
             "bevId": "musicrowmerlot",
             "bevName": "Music Row Merlot",
             "bevType": "wine",
-            "userRating": "",
+            "userRating": 3,
             "tastedDate":"3/26/17",
-            "userNotes": "",
+            "mostRecentDate": "",
             "vineyard": "Stagecoach Vineyard",
             "varietal":"Merlot",
             "wineType":"Merlot",

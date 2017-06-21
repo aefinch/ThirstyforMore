@@ -31,7 +31,6 @@ app.factory("NoteFactory", function($q, $http, FIREBASE_CONFIG){
 
 	let postNewNote = (newNote) => {
 		return $q((resolve, reject) => {
-			console.log("inNote FActory", newNote);
 			$http.post(`${FIREBASE_CONFIG.databaseURL}/userNotes.json`, JSON.stringify(newNote))
 			.then((results) => {
 				resolve(results);

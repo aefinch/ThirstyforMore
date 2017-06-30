@@ -36,6 +36,7 @@ app.controller("JournalCtrl", function ($location, $scope, $routeParams, $rootSc
     $scope.submitDrink = (drink) => {
 	    $scope.drink.uid = $rootScope.user.uid;
         $scope.drink.tastedDate = new Date();
+        $scope.drink.favorite = false;
         $scope.userNote.bevId = $scope.drink.bevId;
         $scope.userNote.uid = $rootScope.user.uid;
         $scope.userNote.date = $scope.drink.tastedDate;

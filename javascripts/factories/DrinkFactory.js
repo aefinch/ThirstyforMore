@@ -51,6 +51,7 @@ app.factory("DrinkFactory", function($q, $http, FIREBASE_CONFIG){
 		            bevName: revisedEntry.bevName,
 		            bevType: revisedEntry.bevType,
 		        	brewery: revisedEntry.brewery,
+		        	favorite: revisedEntry.favorite,
 		        	id: revisedEntry.id,
 					placeId: revisedEntry.placeId,
 		        	tastedDate: revisedEntry.tastedDate,

@@ -29,5 +29,18 @@ app.controller("JournalListCtrl", function($scope, $rootScope, $location, DrinkF
 	$scope.filterResults = (value) => {
 		$scope.filterBy = value;
 	};
+	$scope.filterByFavorite = () => {
+		$scope.favoriteFilter  = true;
+		console.log($scope.favoriteFilter);
+	};
+	$scope.favoriteIt = (entry) => {
+		entry.favorite = !entry.favorite;
+		DrinkFactory.editJournalEntry(entry)
+		.then((results) => {
+
+		}).catch((error) => {
+			console.log("edit journal entry error", entry);
+		});
+	};
 
 });

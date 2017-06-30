@@ -25,12 +25,17 @@ Select an option to sort your results:
 	</label>
 </div>
 <table class="table">
-	<tr ng-repeat="entry in drinks | orderBy: sortBy | filter: {searchText, bevType: filterBy}">
+	<tr ng-repeat="entry in drinks | orderBy: sortBy | filter: (searchText || {bevType: filterBy})">
 		<td>
 			<h4>{{entry.bevName}}</h4>
 			<h5>by {{entry.brewery}}{{entry.winery}}</h5>
 			<p>{{entry.userRating}}</p>
-			<!-- <p>{{entry.userNotes}}</p> -->
+		</td>
+		<td ng-if="entry.favorite">
+			<i class="fa fa-star" aria-hidden="true" ng-click = "favoriteIt(entry)"></i>
+		</td>
+		<td ng-if="!entry.favorite">
+			<i class="fa fa-star-o" aria-hidden="true" ng-click = "favoriteIt(entry)"></i>
 		</td>
 		<td>
 			<div>

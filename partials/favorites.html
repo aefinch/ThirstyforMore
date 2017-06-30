@@ -1,0 +1,27 @@
+<h3>Favorite Places</h3>
+
+		<table class="table">
+			<tr ng-repeat="place in favoritePlaces">
+				<td>
+					<a ng-href="/#!/locations/{{place.type}}/{{place.id}}">{{place.name}}</a>
+					<p>{{place.location}}</p>
+					<p>Google rating: {{place.rating}}</p>
+				</td>
+				<td>
+					<i class="fa fa-star" aria-hidden="true" ng-click = "removeFavoritePlace(place)"></i>
+				</td>
+			</tr>
+		</table>
+<h3>Favorite Drinks</h3>
+<table class="table">
+	<tr ng-repeat="entry in favoriteDrinks">
+		<td>
+			<h4>{{entry.bevName}}</h4>
+			<h5>by {{entry.brewery}}{{entry.winery}}</h5>
+			<p>{{entry.userRating}}</p>
+		</td>
+		<td>
+			<i class="fa fa-star" aria-hidden="true" ng-click = "removeFavoriteDrink(entry)"></i>
+		</td>
+	</tr>
+</table>

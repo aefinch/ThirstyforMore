@@ -70,6 +70,21 @@ wateringHoles = [];
       }
   };
 
+  $scope.addFavoritePlace = (place) => {
+    let newPlace = {
+      "uid": $rootScope.user.uid,
+      "name": place.name,
+      "drinkType": "wine",
+      "location": place.formatted_address,
+      "rating":place.rating,
+      "placeId": place.id 
+    };
+    PlaceFactory.addFavoritePlace(newPlace).then((results) => {
+
+    }).catch((error) => {
+      console.log("add place error", error);
+    });
+  };
   initMap();
 
 

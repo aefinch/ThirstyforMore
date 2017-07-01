@@ -71,7 +71,6 @@ wateringHoles = [];
   };
 
   $scope.addFavoritePlace = (place) => {
-    console.log("in controller", place);
     let newPlace = {
       "uid": $rootScope.user.uid,
       "name": place.name,

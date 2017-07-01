@@ -1,4 +1,4 @@
-app.controller("BeerLocationCtrl", function($scope, $location, $routeParams){
+app.controller("BeerLocationCtrl", function($scope, $rootScope, $location, $routeParams, PlaceFactory){
 var service;
 var infoWindow;
 wateringHoles = [];
@@ -68,6 +68,22 @@ wateringHoles = [];
           wateringHoles=[];
         });
       }
+  };
+
+  $scope.addFavoritePlace = (place) => {
+    let newPlace = {
+      "uid": $rootScope.user.uid,
+      "name": place.name,
+      "drinkType": "beer",
+      "location": place.formatted_address,
+      "rating":place.rating,
+      "placeId": place.id 
+    };
+    PlaceFactory.addFavoritePlace(newPlace).then((results) => {
+
+    }).catch((error) => {
+      console.log("add place error", error);
+    });
   };
 
   initMap();

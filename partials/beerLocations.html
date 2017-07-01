@@ -4,15 +4,14 @@
 </div>
 <div class="row">
 	<div class="col-xs-6" id="beerMap"></div>
-	<!-- <div class="col-xs-6" id="map-winery"></div> -->
 	<div class="col-xs-6">
 		<ul>
 			<li ng-repeat="place in places | limitTo: 10">
 				<a ng-href="/#!/locations/{{place.type}}/{{place.id}}">{{place.name}}</a>
 				<p>{{place.formatted_address}}</p>
 				<p>Google rating: {{place.rating}}</p>
-				<!-- <p ng-if='{{place.open_now}}'>Open Now</p>
-				<p ng-if='{{!place.open_now}}'>Closed Now></p> -->
+				<a ng-click="addFavoritePlace(place)">Add to Favorites List</a>
 			</li>
+
 		</ul>
 	</div>

@@ -28,6 +28,7 @@ app.controller("JournalEditCtrl", function($scope, $rootScope, $routeParams, $lo
     loadDrinkInfo();
 
     $scope.submitDrink = (drink) => {
+        $scope.userNote = {};
         $scope.userNote.bevId = $scope.drink.bevId;
         $scope.userNote.uid = $rootScope.user.uid;
         $scope.userNote.date = $scope.drink.mostRecentDate;

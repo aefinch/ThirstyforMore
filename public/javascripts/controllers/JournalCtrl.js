@@ -18,7 +18,6 @@ app.controller("JournalCtrl", function ($location, $scope, $routeParams, $rootSc
     	});
     };
     loadDrinkInfo(bevId);
-
     let addNewDrink = (drink, comment) => {
         NoteFactory.postNewNote(comment).then((results) => {
             $scope.userNote = {};

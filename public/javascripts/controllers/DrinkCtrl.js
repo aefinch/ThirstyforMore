@@ -52,6 +52,7 @@ app.controller("DrinkCtrl", function ($location, $scope, $rootScope, $routeParam
 	    $scope.drink.ABV = "";
 	    $scope.drink.IBU = "";
         $scope.drink.id = "";
+        $scope.drink.avgRating = "";
 	    addNewDrink($scope.drink);
 	};
 

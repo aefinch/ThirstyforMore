@@ -1,4 +1,4 @@
-<h3>{{userName}}'s Drink Journal</h3>
+<h3 class="journalHeading">{{userName}}'s Drink Journal</h3>
 <h6>{{philosophy}}</h6>
 <input class="form-control form-spacing searchInput" type="text" name="" placeholder="Search journal entries..." ng-model="searchText">
 <div class="dropdown col-xs-6">
@@ -27,8 +27,8 @@ Select an option to sort your results:
 <table class="table">
 	<tr ng-repeat="entry in drinks | orderBy: sortBy | filter: (searchText || {bevType: filterBy})">
 		<td>
-			<h4>{{entry.bevName}}</h4>
-			<h5>by {{entry.brewery}}{{entry.winery}}</h5>
+			<h4 class="bevName">{{entry.bevName}}</h4>
+			<h5>by {{entry.brewery}}{{entry.vineyard}}</h5>
 			<p>{{entry.userRating}}</p>
 		</td>
 		<td ng-if="entry.favorite">

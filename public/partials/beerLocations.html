@@ -3,15 +3,23 @@
   <input id="submit" type="button" value="Search Location">
 </div>
 <div class="row">
-	<div class="col-xs-6" id="beerMap"></div>
 	<div class="col-xs-6">
-		<ul>
-			<li ng-repeat="place in places | limitTo: 10">
-				<a ng-href="/#!/locations/{{place.type}}/{{place.id}}">{{place.name}}</a>
-				<p>{{place.formatted_address}}</p>
-				<p>Google rating: {{place.rating}}</p>
-				<a ng-click="addFavoritePlace(place)">Add to Favorites List</a>
-			</li>
+		<div id="beerMap"></div>
+	</div>
+	<div class="col-xs-6">
+		<table class="locationList">
+			<th>Select your Brewery:</th>
+			<tr ng-repeat="place in places | limitTo: 10">
+				<td>
+					<a class="locationNames" ng-href="/#!/locations/{{place.type}}/{{place.id}}">{{place.name}}</a>
+					<p>{{place.formatted_address}}</p>
+					<p>Google rating: {{place.rating}}</p>
+					<br>
+				</td>
+				<td>
+					<a ng-click="addFavoritePlace(place)">Add to Favorites</a>
+				</td>
+			</tr>
 
-		</ul>
+		</table>
 	</div>

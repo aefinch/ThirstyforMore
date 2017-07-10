@@ -40,7 +40,8 @@ wateringHoles = [];
   function createMarker(place) {
     var marker = new google.maps.Marker({
       map: map,
-      position: place.geometry.location
+      position: place.geometry.location,
+      icon: 'http://icon.softwaresea.com/32x32/5/76/1037655.3b08ee6ed2b458043fa3de616a110d95.gif'
     });
     marker.addListener('click', function() {
       infoWindow.setContent(place.name);

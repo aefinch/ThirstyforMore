@@ -1,14 +1,14 @@
 <form ng-show="!registered">
 <div class="form-group">
-    <label for="userName">Name</label>
+    <label class="formLabel" for="userName">Name</label>
     <input type="text" class="form-control" id="userName" placeholder="Name" ng-model="auth.name">
   </div>
   <div class="form-group">
-    <label for="userEmail">Email address</label>
-    <input type="email" class="form-control" id="userEmail" placeholder="Email" ng-model="auth.email">
+    <label class="formLabel" for="userEmail">E-mail Address</label>
+    <input type="email" class="form-control" id="userEmail" placeholder="E-mail" ng-model="auth.email">
   </div>
   <div class="form-group">
-    <label for="userPassword">Password</label>
+    <label class="formLabel" for="userPassword">Password</label>
     <input type="password" class="form-control" id="userPassword" placeholder="Password" ng-model="auth.password">
   </div>
   
@@ -24,11 +24,11 @@
 </form>
 <form ng-show="registered">
   <div class="form-group">
-    <label for="userEmail">Email address</label>
-    <input type="email" class="form-control" id="userEmail" placeholder="Email" ng-model="auth.email">
+    <label class="formLabel" for="userEmail">E-mail Address</label>
+    <input type="email" class="form-control" id="userEmail" placeholder="E-mail" ng-model="auth.email">
   </div>
   <div class="form-group">
-    <label for="userPassword">Password</label>
+    <label class="formLabel" for="userPassword">Password</label>
     <input type="password" class="form-control" id="userPassword" placeholder="Password" ng-model="auth.password">
   </div>
   

@@ -5,7 +5,7 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="drinkDropdown">
-    <li ng-repeat="drink in drinks"><a href="/#!/journal/drink/{{drink.bevId}}">{{drink.bevName}}</a></li>
+    <li ng-repeat="drink in drinks"><a href="/#!/journal/drink/{{drink.bevId}}">{{drink.bevName}}    {{drink.avgRating}}</a></li>
     <li role="separator" class="divider"></li>
     <li><a ng-click="addNew()">Add a New Beverage</a></li>
   </ul>

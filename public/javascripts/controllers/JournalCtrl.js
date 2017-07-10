@@ -31,6 +31,9 @@ app.controller("JournalCtrl", function ($location, $scope, $routeParams, $rootSc
             console.log("Add error", error);
         });
     };
+     // let updateAvg = () =>{
+     //    DrinkFactory.getDrinks(bevId, "bevId").then
+     // }
     $scope.buttonType="Submit";
     $scope.submitDrink = (drink) => {
 	    $scope.drink.uid = $rootScope.user.uid;
@@ -40,5 +43,8 @@ app.controller("JournalCtrl", function ($location, $scope, $routeParams, $rootSc
         $scope.userNote.uid = $rootScope.user.uid;
         $scope.userNote.date = $scope.drink.tastedDate;
 	    addNewDrink($scope.drink, $scope.userNote);
+        updateAvg();
+
 	};
+
 });

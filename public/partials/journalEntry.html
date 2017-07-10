@@ -28,7 +28,7 @@
     <textarea type="" class="form-control" ng-model="userNote.comment" placeholder=""></textarea>
   </div>
   <div ng-show="edit">
-    <div ng-repeat="note in previousNotes | orderBy: date">
+    <div class="userNotes" ng-repeat="note in previousNotes | orderBy: date">
       <br>
       <div>{{note.date | date: 'longDate'}}</div>
       <div>{{note.comment}}</div>
@@ -66,7 +66,7 @@
     <textarea type="" class="form-control" ng-model="userNote.comment" placeholder=""></textarea>
   </div>
   <div ng-show="edit">
-    <div ng-repeat="note in previousNotes | orderBy: date">
+    <div class="userNotes" ng-repeat="note in previousNotes | orderBy: date">
       <br>
       <div>{{note.date | date: 'longDate'}}</div>
       <div>{{note.comment}}</div>

@@ -1,2 +1,27 @@
 @import "map.scss";
 @import "chooseDrink.scss";
+@import "drinkList.scss";
+@import "favorites.scss";
+@import "journalEntry.scss";
+@import "journalList.scss";
+@import "auth.scss";
+
+body {
+	background-color: #550C18;
+	color: #6D6466;
+	.container {
+		background-color: #fff;
+		margin-bottom: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+#brandLogo {
+	width: 70px;
+	border-radius: 100%;
+}
+.navbar-brand {
+	font-family: 'Lobster Two', cursive;
+	font-size: 45px;
+	margin-top: 10px;
+}

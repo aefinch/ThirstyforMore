@@ -1,4 +1,26 @@
 .chooseDrinkType {
 	width: 250px;
 	height: 400px;
+	margin-bottom: 20px;
+}
+.chooseOne {
+	h2, h3 {
+		text-align: center;
+		font-family: 'Lobster Two', cursive;
+	}
+}
+.chooseDrinkLabel {
+	font-family: 'Lobster Two', cursive;
+}
+$body-bg: transparent; 
+
+@mixin background($imgpath:url('./images/barrels.jpg'),$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: $imgpath;
+        position: $position;
+        repeat: $repeat;
+    }
+}
+.choiceContainer {
+	@include background;
 }

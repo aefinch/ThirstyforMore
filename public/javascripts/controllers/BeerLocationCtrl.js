@@ -40,7 +40,8 @@ wateringHoles = [];
   function createMarker(place) {
     var marker = new google.maps.Marker({
       map: map,
-      position: place.geometry.location
+      position: place.geometry.location,
+      icon: 'http://www.bestbeerhq.com/wp-content/uploads/2015/08/cropped-Beer-icon-32x32.png'
     });
     marker.addListener('click', function() {
       infoWindow.setContent(place.name);

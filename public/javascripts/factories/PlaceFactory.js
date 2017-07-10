@@ -7,6 +7,11 @@ app.factory("PlaceFactory", function($q, $http, FIREBASE_CONFIG){
 				favoritePlaces = fbPlaces.data;
 				Object.keys(favoritePlaces).forEach((key) => {
 					favoritePlaces[key].fbID=key;
+					if (favoritePlaces[key].drinkType==="beer"){
+					favoritePlaces[key].type="brewery";
+				} else {
+					favoritePlaces[key].type="winery";
+				}
 				});
 				resolve(favoritePlaces);
 			}).catch((error) => {

@@ -18,8 +18,8 @@ th {
   font-weight: bold; }
 
 .chooseDrinkType {
-  width: 250px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   margin-bottom: 20px; }
 
 .chooseOne h2, .chooseOne h3 {
@@ -27,12 +27,16 @@ th {
   font-family: 'Lobster Two', cursive; }
 
 .chooseDrinkLabel {
-  font-family: 'Lobster Two', cursive; }
+  font-family: 'Lobster Two', cursive; 
+  font-size: 3rem;}
 
 .choiceContainer {
   background-image: url("./images/barrels.jpg");
   background-position: 0 0;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat; 
+  background-color: black!important;
+  color: white;
+}
 
 .favoritesHeading {
   font-family: 'Lobster Two', cursive; }
@@ -62,7 +66,15 @@ h1 {
   font-weight: 700;
   font-size: 18px; }
 
+.landingHeader {
+  font-size: 43px; 
+}
+
 body {
+    background-image: url('../images/barrelBackground.jpg');
+    background-size: 300px;
+    background-repeat: repeat;
+    height: 100%;
   background-color: #550C18;
   color: #6D6466; }
   body .container {
